@@ -1,0 +1,22 @@
+# Personal/secret settings (not shared)
+settings.local.json
+
+# Runtime-generated agent memory
+agent-memory/
+
+# Environment and secrets
+.env
+.env.*
+*.secret
+*.key
+credentials.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Marketplace-installed skills (re-install via install.sh)
+skills/vercel-react-best-practices/
+skills/next-best-practices/
+skills/next-upgrade/
+skills/next-cache-components/
