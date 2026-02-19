@@ -18,6 +18,14 @@
     "context7": {
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "magic": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/magic-mcp"]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/sequential-thinking-mcp"]
     }
   }
 }
