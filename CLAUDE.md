@@ -49,3 +49,19 @@ These instructions apply to every Claude Code session.
 <!-- - src/components/ for React components -->
 <!-- - src/lib/ for utility functions -->
 <!-- - src/hooks/ for custom React hooks -->
+
+## NestJS Skill Usage
+
+When working on NestJS code, load rules from the nestjs-best-practices skill on-demand by prefix:
+- `arch-*` for architecture decisions
+- `di-*` for dependency injection patterns
+- `security-*` for security review
+- `perf-*` for performance optimization
+- `test-*` for testing patterns
+- `db-*` for database/ORM patterns
+- `error-*` for error handling
+- `api-*` for API design
+- `micro-*` for microservices patterns
+- `devops-*` for deployment/config
+
+Never load AGENTS.md in full — use individual rule files from rules/ directory.

@@ -23,6 +23,9 @@ npx skills add vercel-labs/next-skills --skill next-upgrade
 echo "Installing Next.js Cache Components..."
 npx skills add vercel-labs/next-skills --skill next-cache-components
 
+echo "Installing NestJS Best Practices..."
+npx skills add Kadajett/agent-nestjs-skills --skill nestjs-best-practices
+
 echo ""
 echo "=== Installing Anthropic skills ==="
 
