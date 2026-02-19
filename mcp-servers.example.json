@@ -21,11 +21,11 @@
     },
     "magic": {
       "command": "npx",
-      "args": ["-y", "@anthropic/magic-mcp"]
+      "args": ["-y", "@21st-dev/magic"]
     },
     "sequential-thinking": {
       "command": "npx",
-      "args": ["-y", "@anthropic/sequential-thinking-mcp"]
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
     }
   }
 }
