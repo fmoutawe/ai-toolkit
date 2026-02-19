@@ -14,17 +14,35 @@ These instructions apply to every Claude Code session and every sub-agent in thi
 - Every shared UI component must have a Storybook story
 - Use design tokens for all visual values (colors, spacing, typography) — no hardcoded values
 
+## Naming Conventions
+
+- Files: `kebab-case.ts` (e.g., `user-profile.service.ts`)
+- Classes: `PascalCase` (e.g., `UserProfileService`)
+- Functions / variables: `camelCase`
+- Constants: `UPPER_SNAKE_CASE`
+- React components: `PascalCase` file and export (e.g., `UserCard.tsx`)
+- Test files: `*.spec.ts` (co-located with source)
+
+## Import Ordering
+
+Separate each group with a blank line:
+
+1. Node built-ins (`node:fs`, `node:path`)
+2. External packages (`react`, `@nestjs/*`)
+3. Workspace imports (`@libs/*`, `@shared/*`)
+4. Relative imports (`./`, `../`)
+
 ## Tech Stack
 
-| Domain | Primary | Secondary |
+| Domain | Default | Also used |
 |--------|---------|-----------|
 | Language | TypeScript (strict) | — |
-| Frontend Web | React | Next.js |
+| Frontend Web | Next.js (React) | React SPA (when SSR not needed) |
 | Styling | Tailwind CSS | CSS Modules |
-| Backend | NestJS | Express (legacy) |
+| Backend | NestJS | Express (legacy only) |
 | Mobile | React Native + Expo | Swift / Kotlin (native modules) |
 | State Management | Context API / Zustand | Redux (complex flows only) |
-| ORM | Prisma | TypeORM (legacy) |
+| ORM | Prisma | TypeORM (legacy only) |
 | Testing | Vitest + React Testing Library | Playwright (E2E) |
 | Monorepo | NX | — |
 | UI Library | Storybook | — |
@@ -70,6 +88,7 @@ When multiple solutions exist, prioritize in this order:
 ## Commit Conventions
 
 - Conventional commits: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`, `perf:`
+- Use scopes matching NX project names: `feat(api):`, `fix(web):`, `chore(ui):`
 - Reference issues with `#number` when applicable
 - Subject line under 72 characters
 - Body explains the "why", not the "what"
