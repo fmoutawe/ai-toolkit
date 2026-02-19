@@ -29,7 +29,7 @@ Perform a quality check on a single completed subtask before moving to the next 
 
 ## Step 4 — Coverage Check
 
-1. Verify that the code coverage for the modified files meets the project threshold (default: 80%)
+1. Verify that the code coverage for the modified files meets the project's coverage threshold
 2. If coverage is below the threshold, write additional tests to cover the missing paths
 
 ## What to Do When Validation Fails
