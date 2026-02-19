@@ -24,6 +24,21 @@ echo "Installing Next.js Cache Components..."
 npx skills add vercel-labs/next-skills --skill next-cache-components
 
 echo ""
+echo "=== Installing Anthropic skills ==="
+
+echo "Installing MCP Builder..."
+npx skills add anthropics/claude-skills --skill mcp-builder
+
+echo "Installing Frontend Design..."
+npx skills add anthropics/claude-skills --skill frontend-design
+
+echo "Installing Webapp Testing..."
+npx skills add anthropics/claude-skills --skill webapp-testing
+
+echo "Installing Skill Creator..."
+npx skills add anthropics/claude-skills --skill skill-creator
+
+echo ""
 echo "=== Setup complete ==="
 echo ""
 echo "Next steps:"
