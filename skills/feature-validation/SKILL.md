@@ -38,12 +38,7 @@ Perform a comprehensive quality validation on a completed feature. All subtasks 
 ## Phase 4 — Code Complexity & Quality
 
 1. Run the linter — zero warnings, zero errors
-2. Review for unnecessary complexity:
-   - Deeply nested conditionals or loops
-   - Functions exceeding 50 lines
-   - Large files that should be split
-   - Duplicated logic across files
-   - Unclear or misleading naming
+2. Review for unnecessary complexity (nesting, long functions, large files, duplication, unclear naming)
 3. Verify adherence to existing project patterns and conventions
 4. Check for dead code, commented-out code, debug statements, console.log
 
@@ -68,7 +63,7 @@ All items must pass before requesting PR review:
 - [ ] E2e tests written and passing
 - [ ] Edge and error cases identified and covered
 - [ ] All unit tests passing
-- [ ] Coverage above project threshold (default: 80%)
+- [ ] Coverage above project threshold
 - [ ] No performance regression
 - [ ] Linter passes (zero warnings, zero errors)
 - [ ] Code complexity reasonable
