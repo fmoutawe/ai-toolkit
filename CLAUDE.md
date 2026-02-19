@@ -14,6 +14,18 @@ These instructions apply to every Claude Code session and every sub-agent in thi
 - Every shared UI component must have a Storybook story
 - Use design tokens for all visual values (colors, spacing, typography) — no hardcoded values
 
+## Design Tokens
+
+All design tokens follow the [W3C Design Tokens Format Module](https://www.designtokens.org/TR/2025.10/format/) (DTCG 2025.10).
+
+- Token files use the `.tokens.json` extension
+- Each token declares `$value`, `$type`, and optionally `$description`
+- Group tokens in nested objects; use `{}` groups for logical namespaces (e.g., `color.brand.primary`)
+- Reference other tokens with alias syntax: `"{color.base.blue}"`
+- Supported types include `color`, `dimension`, `fontFamily`, `fontWeight`, `duration`, `cubicBezier`, `number`, and `shadow`
+- Transform tokens into platform outputs (CSS custom properties, Tailwind theme, Swift/Kotlin constants) with **Style Dictionary**
+- Never hardcode visual values — always reference tokens from the shared design tokens package
+
 ## Naming Conventions
 
 - Files: `kebab-case.ts` (e.g., `user-profile.service.ts`)
@@ -37,14 +49,15 @@ Separate each group with a blank line:
 | Domain | Default | Also used |
 |--------|---------|-----------|
 | Language | TypeScript (strict) | — |
-| Frontend Web | Next.js (React) | React SPA (when SSR not needed) |
+| Frontend Web | Next.js (React) | Remix, Astro (SSR alternatives) |
 | Styling | Tailwind CSS | CSS Modules |
 | Backend | NestJS | Express (legacy only) |
 | Mobile | React Native + Expo | Swift / Kotlin (native modules) |
 | State Management | Context API / Zustand | Redux (complex flows only) |
 | ORM | Prisma | TypeORM (legacy only) |
 | Testing | Vitest + React Testing Library | Playwright (E2E) |
-| Monorepo | NX | — |
+| Monorepo | NX | Turborepo |
+| Design Tokens | Style Dictionary | — |
 | UI Library | Storybook | — |
 | CI/CD | GitHub Actions | — |
 
