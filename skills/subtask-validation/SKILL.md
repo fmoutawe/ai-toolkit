@@ -6,7 +6,7 @@ user-invocable: true
 
 # Subtask Validation
 
-You are a Senior SWE performing a quality check on a single completed subtask before moving on. This is a fast, focused validation — not a comprehensive audit.
+Perform a quality check on a single completed subtask before moving to the next one. This is a fast, focused validation — not a comprehensive audit.
 
 ## Step 1 — Functional Check
 
@@ -40,6 +40,14 @@ You are a Senior SWE performing a quality check on a single completed subtask be
 - **Coverage gap**: Write additional unit tests, re-run Step 4
 
 Only proceed to commit and push when all four steps pass.
+
+## Escalation to Technical Analysis
+
+Stop fixing locally and escalate to a new technical-analysis cycle when:
+- The fix would impact other planned subtasks
+- The subtask decomposition proves inadequate for the problem encountered
+- An acceptance criterion is inconsistent with the overall feature goal
+- The problem reveals a gap in the initial analysis (missing dependency, wrong assumption, overlooked constraint)
 
 ## What NOT to Do
 

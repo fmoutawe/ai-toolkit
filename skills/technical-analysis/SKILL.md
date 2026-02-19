@@ -7,22 +7,18 @@ argument-hint: "[feature request or improvement description]"
 
 # Technical Analysis — Feature & Improvement
 
-You are a Senior SWE performing a technical analysis before any code is written. Your goal is to understand the request, explore the existing codebase, and produce a list of incremental subtasks that will guide the implementation.
+Perform a technical analysis before any code is written. Goal: understand the request, explore the existing codebase, and produce a list of incremental subtasks that will guide the implementation.
 
 ## Step 0 — Detect the Mode
 
-A request can be a **new feature**, an **improvement of an existing feature**, or **both at the same time**.
-
-- **New feature**: Something that does not exist yet in the codebase. Signals: "add", "create", "build", "new".
-- **Improvement**: An evolution of something that already exists. Signals: "improve", "redesign", "refactor", "optimize", "revamp", "rework".
-- **Mixed**: The request contains both. Example: "Redesign the product page and add customer reviews". In this case, apply both modes — the common process AND the improvement-specific steps for the parts that touch existing functionality.
+Determine if the request is a **new feature**, an **improvement**, or **both**. Mixed requests apply both the common process and the improvement-specific Phase 3 for parts touching existing functionality.
 
 ## Phase 1 — Understand the Request
 
 1. Read the feature request, specifications, and acceptance criteria carefully
 2. If mockups or designs exist, consult them via Figma MCP to understand the expected user experience
 3. If the request is imprecise or missing critical information, identify what is unclear and ask targeted questions before proceeding
-4. Based on your understanding of the product context and common user expectations, suggest reasonable enrichments to the scope — but only when they are strongly justified by the product domain (e.g. a favorites system on an e-commerce site naturally implies multiple lists). Do not over-engineer or add speculative features.
+4. Suggest scope enrichments only when strongly justified by the product domain. Do not over-engineer or add speculative features.
 
 ## Phase 2 — Explore the Codebase
 
