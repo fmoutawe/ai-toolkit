@@ -125,6 +125,44 @@ When multiple solutions exist, prioritize in this order:
 
 NX monorepo with shared UI library, shared packages, and applications. Hexagonal architecture with module-first organization inside each package/app. Domain layer (entities, use-cases, ports) has zero framework dependencies. Adapters are wired via dependency injection at the module level. Each agent receives framework-specific hexagonal mapping in its own instructions.
 
+## Workflows
+
+Infer the appropriate workflow from the user's prompt. Do not ask which workflow to use — detect the intent and follow the sequence. Each arrow (→) means: complete the current step fully before starting the next.
+
+### Feature (new feature, significant change, new module)
+
+```
+technical-analysis
+  → [for each subtask]: subtask-validation → implement → test-automator
+  → feature-validation
+  → code-reviewer + security-auditor + performance-engineer (parallel)
+  → devops-engineer (only if the feature requires CI/CD or infra changes)
+```
+
+### Debug (bug, crash, test failure, unexpected behavior)
+
+```
+debugger
+  → implement fix
+  → test-automator (add regression test)
+  → code-reviewer
+```
+
+### Refactor (code improvement, optimization, tech debt)
+
+```
+technical-analysis
+  → implement
+  → test-automator (verify no regressions)
+  → code-reviewer + performance-engineer (parallel)
+```
+
+### Review (PR review, pre-deploy audit)
+
+```
+code-reviewer + security-auditor + performance-engineer (parallel)
+```
+
 ## NestJS Skill Usage
 
 When working on NestJS code, load rules from the nestjs-best-practices skill on-demand by prefix: `arch-*` for architecture, `di-*` for dependency injection, `security-*` for security, `perf-*` for performance, `test-*` for testing, `db-*` for database, `error-*` for error handling, `api-*` for API design, `micro-*` for microservices, `devops-*` for deployment. Never load AGENTS.md in full — use individual rule files from rules/ directory.
