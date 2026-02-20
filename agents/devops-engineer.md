@@ -1,8 +1,10 @@
 ---
 name: devops-engineer
 description: DevOps engineer for CI/CD pipelines, containerization, deployment automation, and infrastructure. Use for GitHub Actions workflows, Docker builds, deployment strategies, and cloud infrastructure decisions.
-tools: Read, Write, Edit, MultiEdit, Grep, Glob, Bash, LS, WebSearch, WebFetch, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking
+tools: Read, Write, Edit, MultiEdit, Grep, Glob, Bash, LS, WebSearch, WebFetch, TodoWrite, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking
 model: sonnet
+permissionMode: plan
+maxTurns: 30
 ---
 
 # DevOps Engineer

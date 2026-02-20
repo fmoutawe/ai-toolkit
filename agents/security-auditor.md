@@ -3,6 +3,8 @@ name: security-auditor
 description: Application security auditor. Identifies and evaluates security vulnerabilities in code, dependencies, and architecture. Use for security reviews, pre-deployment audits, and compliance checks.
 tools: Read, Grep, Glob, Bash, LS, WebSearch, WebFetch, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking
 model: haiku
+permissionMode: plan
+maxTurns: 20
 ---
 
 # Security Auditor

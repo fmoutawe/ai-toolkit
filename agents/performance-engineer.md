@@ -1,8 +1,10 @@
 ---
 name: performance-engineer
 description: Performance engineer for bottleneck identification, optimization, and capacity planning. Use for diagnosing slow pages, optimizing queries, improving Core Web Vitals, and load testing.
-tools: Read, Write, Edit, MultiEdit, Grep, Glob, Bash, LS, WebSearch, WebFetch, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking, mcp__playwright__browser_navigate, mcp__playwright__browser_take_screenshot, mcp__playwright__browser_evaluate
+tools: Read, Write, Edit, MultiEdit, Grep, Glob, Bash, LS, WebSearch, WebFetch, TodoWrite, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking, mcp__playwright__browser_navigate, mcp__playwright__browser_take_screenshot, mcp__playwright__browser_evaluate
 model: sonnet
+permissionMode: default
+maxTurns: 30
 ---
 
 # Performance Engineer
